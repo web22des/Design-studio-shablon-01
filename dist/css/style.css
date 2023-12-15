@@ -670,6 +670,14 @@ body {
   background-color: #86DBF6;
 }
 
+.green-block {
+  width: 200px;
+  height: 200px;
+  background-color: #0CBCF5;
+  margin: 0 auto;
+  border: 1px solid #c40606;
+}
+
 body {
   color: #000;
 }
