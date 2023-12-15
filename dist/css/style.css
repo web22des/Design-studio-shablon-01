@@ -1524,6 +1524,10 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 body {
+  background-color: #86DBF6;
+}
+
+body {
   color: #000;
 }
 
