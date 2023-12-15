@@ -1,5 +1,53 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -721,6 +769,10 @@ video {
   visibility: visible;
 }
 
+.collapse {
+  visibility: collapse;
+}
+
 .static {
   position: static;
 }
@@ -768,6 +820,10 @@ video {
   display: grid;
 }
 
+.contents {
+  display: contents;
+}
+
 .hidden {
   display: none;
 }
@@ -781,6 +837,10 @@ video {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.border-collapse {
+  border-collapse: collapse;
 }
 
 .transform {
@@ -827,6 +887,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .underline {
@@ -1150,6 +1214,314 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 /* ======================== */
+
+/* ====================== */
+
+@supports (padding-top: clamp( 2rem , 1.3846153846rem  +  3.0769230769vw , 3.75rem )) {
+  .py-section {
+    padding-top: clamp( 2rem , 1.3846153846rem  +  3.0769230769vw , 3.75rem );
+  }
+}
+
+@supports not (padding-top: clamp( 2rem , 1.3846153846rem  +  3.0769230769vw , 3.75rem )) {
+  .py-section {
+    padding-top: calc(2rem + 1.75 * (100vw - 20rem) / 56.875);
+  }
+}
+
+@supports (padding-bottom: clamp( 2rem , 1.3846153846rem  +  3.0769230769vw , 3.75rem )) {
+  .py-section {
+    padding-bottom: clamp( 2rem , 1.3846153846rem  +  3.0769230769vw , 3.75rem );
+  }
+}
+
+@supports not (padding-bottom: clamp( 2rem , 1.3846153846rem  +  3.0769230769vw , 3.75rem )) {
+  .py-section {
+    padding-bottom: calc(2rem + 1.75 * (100vw - 20rem) / 56.875);
+  }
+}
+
+.my-normal {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.bg-center {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pp-card {
+  padding-top: 0.25rem;
+  padding-right: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+.br-1 {
+  border-radius: 1rem;
+}
+
+/* ======= class ======= */
+
+.hero-title {
+  font-family: "Lato";
+  font-weight: 400;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@supports (font-size: clamp( 4.5rem , 4.5rem  +  0vw , 4.5rem )) {
+  .hero-title {
+    font-size: clamp( 4.5rem , 4.5rem  +  0vw , 4.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 4.5rem , 4.5rem  +  0vw , 4.5rem )) {
+  .hero-title {
+    font-size: calc(4.5rem + 0 * (100vw - 20rem) / 56.875);
+  }
+}
+
+.hero-sub-title {
+  font-family: "Lato";
+  font-weight: 400;
+  line-height: 110%;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@supports (font-size: clamp( 2.25rem , 2.25rem  +  0vw , 2.25rem )) {
+  .hero-sub-title {
+    font-size: clamp( 2.25rem , 2.25rem  +  0vw , 2.25rem );
+  }
+}
+
+@supports not (font-size: clamp( 2.25rem , 2.25rem  +  0vw , 2.25rem )) {
+  .hero-sub-title {
+    font-size: calc(2.25rem + 0 * (100vw - 20rem) / 56.875);
+  }
+}
+
+.big-text {
+  font-family: "OpenSans";
+  font-weight: 400;
+  line-height: 160%;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@supports (font-size: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
+  .big-text {
+    font-size: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
+  .big-text {
+    font-size: calc(1.25rem + 0 * (100vw - 20rem) / 56.875);
+  }
+}
+
+.title-1 {
+  font-family: "Lato";
+  font-weight: 400;
+  line-height: 110%;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@supports (font-size: clamp( 3rem , 3rem  +  0vw , 3rem )) {
+  .title-1 {
+    font-size: clamp( 3rem , 3rem  +  0vw , 3rem );
+  }
+}
+
+@supports not (font-size: clamp( 3rem , 3rem  +  0vw , 3rem )) {
+  .title-1 {
+    font-size: calc(3rem + 0 * (100vw - 20rem) / 56.875);
+  }
+}
+
+.title-2 {
+  font-family: "Lato";
+  font-weight: 700;
+  line-height: 110%;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@supports (font-size: clamp( 3rem , 3rem  +  0vw , 3rem )) {
+  .title-2 {
+    font-size: clamp( 3rem , 3rem  +  0vw , 3rem );
+  }
+}
+
+@supports not (font-size: clamp( 3rem , 3rem  +  0vw , 3rem )) {
+  .title-2 {
+    font-size: calc(3rem + 0 * (100vw - 20rem) / 56.875);
+  }
+}
+
+.title-3 {
+  font-family: "Lato";
+  font-weight: 700;
+  line-height: 120%;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@supports (font-size: clamp( 1.875rem , 1.875rem  +  0vw , 1.875rem )) {
+  .title-3 {
+    font-size: clamp( 1.875rem , 1.875rem  +  0vw , 1.875rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.875rem , 1.875rem  +  0vw , 1.875rem )) {
+  .title-3 {
+    font-size: calc(1.875rem + 0 * (100vw - 20rem) / 56.875);
+  }
+}
+
+.title-4 {
+  font-family: "Montserrat";
+  font-weight: 300;
+  line-height: 120%;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@supports (font-size: clamp( 2.25rem , 2.25rem  +  0vw , 2.25rem )) {
+  .title-4 {
+    font-size: clamp( 2.25rem , 2.25rem  +  0vw , 2.25rem );
+  }
+}
+
+@supports not (font-size: clamp( 2.25rem , 2.25rem  +  0vw , 2.25rem )) {
+  .title-4 {
+    font-size: calc(2.25rem + 0 * (100vw - 20rem) / 56.875);
+  }
+}
+
+.title-5 {
+  font-family: "Lato";
+  font-weight: 300;
+  line-height: 120%;
+  color: #808080;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@supports (font-size: clamp( 1.5rem , 1.5rem  +  0vw , 1.5rem )) {
+  .title-5 {
+    font-size: clamp( 1.5rem , 1.5rem  +  0vw , 1.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.5rem , 1.5rem  +  0vw , 1.5rem )) {
+  .title-5 {
+    font-size: calc(1.5rem + 0 * (100vw - 20rem) / 56.875);
+  }
+}
+
+.title-6 {
+  font-family: "Lato";
+  font-weight: 400;
+  line-height: 120%;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@supports (font-size: clamp( 1.125rem , 1.125rem  +  0vw , 1.125rem )) {
+  .title-6 {
+    font-size: clamp( 1.125rem , 1.125rem  +  0vw , 1.125rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.125rem , 1.125rem  +  0vw , 1.125rem )) {
+  .title-6 {
+    font-size: calc(1.125rem + 0 * (100vw - 20rem) / 56.875);
+  }
+}
+
+.text {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.text-smoll {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 160%;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.text-link {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: normal;
+  color: #0CBCF5;
+}
+
+.text-quote {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 125%;
+  color: #111111;
+  border-left: 4px solid #0CBCF5;
+  padding: 1.25rem;
+}
+
+.btn {
+  font-family: "OpenSans";
+  font-weight: 700;
+  font-size: 1rem;
+  color: #FFFFFF;
+  background-color: #0CBCF5;
+  padding: 20px 60px 20px 60px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.ul-list {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: normal;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.ol-list {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: normal;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
 
 body {
   color: #000;
