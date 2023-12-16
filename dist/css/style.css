@@ -2393,7 +2393,7 @@ h6 {
 
 .title-5 {
   font-family: "Lato";
-  font-weight: 300;
+  font-weight: 700;
   text-transform: uppercase;
   line-height: 120%;
   color: #808080;
@@ -2495,11 +2495,36 @@ h6 {
 }
 
 .btn-link {
+  display: inline-block;
   font-family: "OpenSans";
   font-weight: 700;
   font-size: 0.875rem;
   color: #808080;
   text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  position: relative;
+  -webkit-transition: ease 0.7s;
+  transition: ease 0.7s;
+}
+
+.btn-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: #0CBCF5;
+  -webkit-transition: ease 0.7s;
+  transition: ease 0.7s;
+}
+
+.btn-link:hover {
+  color: #0CBCF5;
+}
+
+.btn-link:hover::before {
+  width: 100%;
 }
 
 .ul-list {
@@ -2885,9 +2910,54 @@ span._icon-arrow-right2 {
   text-align: center;
 }
 
+.bem-block-09__img {
+  height: auto;
+  width: 100%;
+}
+
 .bem-block-09__card-info {
   height: 130px;
   overflow: hidden;
+}
+
+.bem-block-10 {
+  background-color: #B0C7CF;
+}
+
+.bem-block-10__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.bem-block-10__card {
+  max-width: 33%;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-bottom: 16px;
+}
+
+.bem-block-10__img {
+  width: 100%;
+  height: auto;
+}
+
+.bem-block-10__body .title-3 {
+  min-height: 4.5rem;
+}
+
+.bem-block-10__body .title-5 {
+  color: #0CBCF5;
+  position: relative;
+}
+
+.bem-block-10__body .title-5::after {
+  content: "2";
+  position: absolute;
+  top: -7px;
+  color: #0CBCF5;
 }
 
 body {
@@ -3184,6 +3254,23 @@ body {
   .bem-block-09__card-info {
     height: 110px;
   }
+
+  .bem-block-10__flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .bem-block-10__card {
+    max-width: 47%;
+    margin-bottom: 1.25rem;
+  }
+
+  .bem-block-10__card:last-child {
+    margin-bottom: 0rem;
+  }
 }
 
 @media (max-width: 61.99875em) {
@@ -3213,5 +3300,15 @@ body {
 
   .bem-block-09__card-info {
     height: auto;
+  }
+}
+
+@media (max-width: 35.875em) {
+  .bem-block-10__flex {
+    display: block;
+  }
+
+  .bem-block-10__card {
+    max-width: 100%;
   }
 }
