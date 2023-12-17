@@ -2794,11 +2794,6 @@ body._touch .menu__list > li._active .menu__arrow {
 
 /* ======================== */
 
-.hero-02 {
-  margin-top: 4.375rem;
-  min-height: calc(100vh - 70rem);
-}
-
 .hero-02__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3200,6 +3195,140 @@ span._icon-arrow-right2 {
   -ms-grid-row: 5;
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
+}
+
+.bem-block-gallery-01 {
+  background-color: #B0C7CF;
+}
+
+.bem-block-gallery-01__container .title-2 {
+  border-bottom: 1px solid #111111;
+  padding-bottom: 28px;
+  margin-bottom: 40px;
+}
+
+.bem-block-gallery-01__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.bem-block-gallery-01__card {
+  display: inline-block;
+  max-width: 390px;
+  max-height: 390px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.bem-block-gallery-01__card::before,
+.bem-block-gallery-01__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.bem-block-gallery-01__card:hover::before,
+.bem-block-gallery-01__card:hover::after {
+  opacity: 1;
+}
+
+.bem-block-gallery-01__card:hover img {
+  width: 120%;
+  height: 120%;
+}
+
+.bem-block-gallery-01__card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: ease 0.7s;
+  transition: ease 0.7s;
+}
+
+.bem-block-contacts-01 {
+  background-color: #0CBCF5;
+}
+
+.bem-block-contacts-01__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.bem-block-contacts-01__container:first-child {
+  background-color: #FFFFFF;
+}
+
+.bem-block-contacts-01__newsletter input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #0CBCF5;
+  margin-bottom: 12px;
+}
+
+.bem-block-contacts-01__newsletter input:focus {
+  outline: 1px solid #054A71;
+}
+
+.bem-block-contacts-01__newsletter label {
+  color: #0CBCF5;
+}
+
+.bem-block-contacts-01__col {
+  max-width: 50%;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.bem-block-contacts-01__col a {
+  display: block;
+}
+
+.bem-block-contacts-01__social {
+  max-width: 250px;
+  margin: 0 auto;
+  font-size: 32px;
+  color: #FFFFFF;
+}
+
+.bem-block-contacts-01__social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.bem-block-contacts-01__social ul span {
+  display: block;
+  width: 64px;
+  height: 64px;
+  -webkit-transition: ease 0.7s;
+  transition: ease 0.7s;
+}
+
+.bem-block-contacts-01__social ul span:hover {
+  font-size: 44px;
 }
 
 body {
@@ -3686,6 +3815,10 @@ body {
         grid-template-areas: "col-1 col-1 col-1 col-3 col-3 col-3" "col-1 col-1 col-1 col-3 col-3 col-3" "col-1 col-1 col-1 col-3 col-3 col-3" "col-2 col-2 col-2 col-4 col-4 col-4" "col-2 col-2 col-2 col-4 col-4 col-4";
   }
 
+  .bem-block-contacts-01__col {
+    max-width: 100%;
+  }
+
   .col-1 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
@@ -3831,6 +3964,18 @@ body {
 
   .bem-block-08__col {
     max-width: 100%;
+  }
+
+  .bem-block-gallery-01__grid {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .bem-block-contacts-01__container:first-child {
+    display: block;
+    margin-bottom: 16px;
   }
 }
 
@@ -3992,5 +4137,25 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  .bem-block-gallery-01__grid {
+    display: block;
+  }
+
+  .bem-block-gallery-01__card {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .bem-block-gallery-01__card:last-child {
+    margin-bottom: 0;
+  }
+
+  .bem-block-contacts-01__container {
+    display: block;
   }
 }
