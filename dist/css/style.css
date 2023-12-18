@@ -2559,21 +2559,85 @@ h6 {
   margin-bottom: 1.25rem;
 }
 
-.text-test {
-  font-family: "OpenSans";
-  font-weight: 400;
+.typography__page {
+  background-color: #f2f2f2;
+  padding: 100px 0px 100px 0px;
 }
 
-@supports (font-size: clamp( 3.5rem , 3.5rem  +  0vw , 3.5rem )) {
-  .text-test {
-    font-size: clamp( 3.5rem , 3.5rem  +  0vw , 3.5rem );
-  }
+.typography__inner {
+  padding: 16px;
 }
 
-@supports not (font-size: clamp( 3.5rem , 3.5rem  +  0vw , 3.5rem )) {
-  .text-test {
-    font-size: calc(3.5rem + 0 * (100vw - 20rem) / 56);
-  }
+.typography__wrap {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 40px 20px 40px 20px;
+}
+
+.typography__wrap-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: transparent;
+}
+
+.typography__wrap-color span {
+  display: block;
+  padding: 4px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.typography__block {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+.typography__col-1 {
+  background-color: #0CBCF5;
+}
+
+.typography__col-2 {
+  background-color: #054A71;
+}
+
+.typography__col-3 {
+  background-color: #0172B2;
+}
+
+.typography__col-4 {
+  background-color: #86DBF6;
+}
+
+.typography__col-5 {
+  background-color: #D6DFE2;
+}
+
+.typography__col-6 {
+  background-color: #111111;
+}
+
+.typography__col-7 {
+  background-color: #FFFFFF;
+}
+
+.typography__col-8 {
+  background-color: #808080;
+}
+
+.typography__col-9 {
+  background-color: #DADBE0;
+}
+
+.typography__col-10 {
+  background-color: #B0C7CF;
 }
 
 body._lock {
@@ -2793,6 +2857,10 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 /* ======================== */
+
+.hero-02 {
+  min-height: calc(100vh - 70rem);
+}
 
 .hero-02__flex {
   display: -webkit-box;
